@@ -7,11 +7,11 @@
 
 import Foundation
 
-public struct Stack<T: Comparable>: ExpressibleByArrayLiteral, CustomStringConvertible {
+public struct Stack<T>: ExpressibleByArrayLiteral, CustomStringConvertible {
     
     public typealias ArrayLiteralElement = T
     
-    private var data: [T]
+    var data: [T]
     
     var isEmpty: Bool {
         return data.isEmpty
@@ -19,6 +19,10 @@ public struct Stack<T: Comparable>: ExpressibleByArrayLiteral, CustomStringConve
     
     public var description: String {
         return data.description
+    }
+    
+    public var count: Int {
+        return data.count
     }
     
     public init(arrayLiteral elements: T...) {

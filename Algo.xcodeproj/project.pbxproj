@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F7793A242832FE0B000D9428 /* StackWithMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A232832FE0B000D9428 /* StackWithMin.swift */; };
-		F7793A2628330217000D9428 /* StacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A2528330217000D9428 /* StacksTests.swift */; };
+		F7793A2628330217000D9428 /* StacksAndQueuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A2528330217000D9428 /* StacksAndQueuesTests.swift */; };
+		F7793A28283305A2000D9428 /* SetOfStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A27283305A2000D9428 /* SetOfStacks.swift */; };
+		F7793A2A28330DD5000D9428 /* QueueViaStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A2928330DD5000D9428 /* QueueViaStacks.swift */; };
+		F7793A2C2833123A000D9428 /* ThreeStacksInOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A2B2833123A000D9428 /* ThreeStacksInOne.swift */; };
+		F7793A2E2834096A000D9428 /* AnimalShelterQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A2D2834096A000D9428 /* AnimalShelterQueue.swift */; };
 		F7AEC1E6282E22B7008174B9 /* AlgoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEC1E5282E22B7008174B9 /* AlgoApp.swift */; };
 		F7AEC1E8282E22B7008174B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEC1E7282E22B7008174B9 /* ContentView.swift */; };
 		F7AEC1EA282E22BA008174B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AEC1E9282E22BA008174B9 /* Assets.xcassets */; };
@@ -32,7 +36,11 @@
 
 /* Begin PBXFileReference section */
 		F7793A232832FE0B000D9428 /* StackWithMin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackWithMin.swift; sourceTree = "<group>"; };
-		F7793A2528330217000D9428 /* StacksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksTests.swift; sourceTree = "<group>"; };
+		F7793A2528330217000D9428 /* StacksAndQueuesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksAndQueuesTests.swift; sourceTree = "<group>"; };
+		F7793A27283305A2000D9428 /* SetOfStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetOfStacks.swift; sourceTree = "<group>"; };
+		F7793A2928330DD5000D9428 /* QueueViaStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViaStacks.swift; sourceTree = "<group>"; };
+		F7793A2B2833123A000D9428 /* ThreeStacksInOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeStacksInOne.swift; sourceTree = "<group>"; };
+		F7793A2D2834096A000D9428 /* AnimalShelterQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalShelterQueue.swift; sourceTree = "<group>"; };
 		F7AEC1E2282E22B7008174B9 /* Algo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AEC1E5282E22B7008174B9 /* AlgoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoApp.swift; sourceTree = "<group>"; };
 		F7AEC1E7282E22B7008174B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,9 +99,13 @@
 				F7AEC1EB282E22BA008174B9 /* Preview Content */,
 				F7AEC1F3282E22DA008174B9 /* LinkedList.swift */,
 				F7AEC2022831D6EB008174B9 /* Stack.swift */,
+				F7793A27283305A2000D9428 /* SetOfStacks.swift */,
+				F7793A2928330DD5000D9428 /* QueueViaStacks.swift */,
 				F7793A232832FE0B000D9428 /* StackWithMin.swift */,
 				F7AEC2042831D86E008174B9 /* Queue.swift */,
 				F7AEC2062831DBA7008174B9 /* StackAndQueuesQuestions.swift */,
+				F7793A2D2834096A000D9428 /* AnimalShelterQueue.swift */,
+				F7793A2B2833123A000D9428 /* ThreeStacksInOne.swift */,
 			);
 			path = Algo;
 			sourceTree = "<group>";
@@ -110,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				F7AEC1FB282E27D3008174B9 /* LinkedListTests.swift */,
-				F7793A2528330217000D9428 /* StacksTests.swift */,
+				F7793A2528330217000D9428 /* StacksAndQueuesTests.swift */,
 			);
 			path = AlgoTests;
 			sourceTree = "<group>";
@@ -216,10 +228,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7AEC2052831D86E008174B9 /* Queue.swift in Sources */,
+				F7793A2E2834096A000D9428 /* AnimalShelterQueue.swift in Sources */,
 				F7AEC2032831D6EC008174B9 /* Stack.swift in Sources */,
+				F7793A2A28330DD5000D9428 /* QueueViaStacks.swift in Sources */,
+				F7793A28283305A2000D9428 /* SetOfStacks.swift in Sources */,
 				F7AEC2072831DBA7008174B9 /* StackAndQueuesQuestions.swift in Sources */,
 				F7AEC1F4282E22DA008174B9 /* LinkedList.swift in Sources */,
 				F7AEC1E8282E22B7008174B9 /* ContentView.swift in Sources */,
+				F7793A2C2833123A000D9428 /* ThreeStacksInOne.swift in Sources */,
 				F7AEC1E6282E22B7008174B9 /* AlgoApp.swift in Sources */,
 				F7793A242832FE0B000D9428 /* StackWithMin.swift in Sources */,
 			);
@@ -229,7 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7793A2628330217000D9428 /* StacksTests.swift in Sources */,
+				F7793A2628330217000D9428 /* StacksAndQueuesTests.swift in Sources */,
 				F7AEC1FC282E27D3008174B9 /* LinkedListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
