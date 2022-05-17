@@ -13,6 +13,9 @@
 		F7793A2A28330DD5000D9428 /* QueueViaStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A2928330DD5000D9428 /* QueueViaStacks.swift */; };
 		F7793A2C2833123A000D9428 /* ThreeStacksInOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A2B2833123A000D9428 /* ThreeStacksInOne.swift */; };
 		F7793A2E2834096A000D9428 /* AnimalShelterQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A2D2834096A000D9428 /* AnimalShelterQueue.swift */; };
+		F7793A3028341F67000D9428 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A2F28341F67000D9428 /* BinarySearchTree.swift */; };
+		F7793A352834246D000D9428 /* BinaryTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A342834246D000D9428 /* BinaryTreeView.swift */; };
+		F7793A3728343BC8000D9428 /* BinaryTreeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A3628343BC8000D9428 /* BinaryTreeDemo.swift */; };
 		F7AEC1E6282E22B7008174B9 /* AlgoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEC1E5282E22B7008174B9 /* AlgoApp.swift */; };
 		F7AEC1E8282E22B7008174B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEC1E7282E22B7008174B9 /* ContentView.swift */; };
 		F7AEC1EA282E22BA008174B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AEC1E9282E22BA008174B9 /* Assets.xcassets */; };
@@ -41,6 +44,9 @@
 		F7793A2928330DD5000D9428 /* QueueViaStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViaStacks.swift; sourceTree = "<group>"; };
 		F7793A2B2833123A000D9428 /* ThreeStacksInOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeStacksInOne.swift; sourceTree = "<group>"; };
 		F7793A2D2834096A000D9428 /* AnimalShelterQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalShelterQueue.swift; sourceTree = "<group>"; };
+		F7793A2F28341F67000D9428 /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
+		F7793A342834246D000D9428 /* BinaryTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeView.swift; sourceTree = "<group>"; };
+		F7793A3628343BC8000D9428 /* BinaryTreeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeDemo.swift; sourceTree = "<group>"; };
 		F7AEC1E2282E22B7008174B9 /* Algo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AEC1E5282E22B7008174B9 /* AlgoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoApp.swift; sourceTree = "<group>"; };
 		F7AEC1E7282E22B7008174B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +78,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7793A3128342434000D9428 /* StacksAndQueues */ = {
+			isa = PBXGroup;
+			children = (
+				F7AEC2022831D6EB008174B9 /* Stack.swift */,
+				F7793A27283305A2000D9428 /* SetOfStacks.swift */,
+				F7793A2928330DD5000D9428 /* QueueViaStacks.swift */,
+				F7793A232832FE0B000D9428 /* StackWithMin.swift */,
+				F7AEC2042831D86E008174B9 /* Queue.swift */,
+				F7AEC2062831DBA7008174B9 /* StackAndQueuesQuestions.swift */,
+				F7793A2D2834096A000D9428 /* AnimalShelterQueue.swift */,
+				F7793A2B2833123A000D9428 /* ThreeStacksInOne.swift */,
+			);
+			path = StacksAndQueues;
+			sourceTree = "<group>";
+		};
+		F7793A3228342441000D9428 /* LinkedLists */ = {
+			isa = PBXGroup;
+			children = (
+				F7AEC1F3282E22DA008174B9 /* LinkedList.swift */,
+			);
+			path = LinkedLists;
+			sourceTree = "<group>";
+		};
+		F7793A332834244B000D9428 /* Trees */ = {
+			isa = PBXGroup;
+			children = (
+				F7793A2F28341F67000D9428 /* BinarySearchTree.swift */,
+				F7793A342834246D000D9428 /* BinaryTreeView.swift */,
+				F7793A3628343BC8000D9428 /* BinaryTreeDemo.swift */,
+			);
+			path = Trees;
+			sourceTree = "<group>";
+		};
 		F7AEC1D9282E22B7008174B9 = {
 			isa = PBXGroup;
 			children = (
@@ -97,15 +136,9 @@
 				F7AEC1E7282E22B7008174B9 /* ContentView.swift */,
 				F7AEC1E9282E22BA008174B9 /* Assets.xcassets */,
 				F7AEC1EB282E22BA008174B9 /* Preview Content */,
-				F7AEC1F3282E22DA008174B9 /* LinkedList.swift */,
-				F7AEC2022831D6EB008174B9 /* Stack.swift */,
-				F7793A27283305A2000D9428 /* SetOfStacks.swift */,
-				F7793A2928330DD5000D9428 /* QueueViaStacks.swift */,
-				F7793A232832FE0B000D9428 /* StackWithMin.swift */,
-				F7AEC2042831D86E008174B9 /* Queue.swift */,
-				F7AEC2062831DBA7008174B9 /* StackAndQueuesQuestions.swift */,
-				F7793A2D2834096A000D9428 /* AnimalShelterQueue.swift */,
-				F7793A2B2833123A000D9428 /* ThreeStacksInOne.swift */,
+				F7793A3228342441000D9428 /* LinkedLists */,
+				F7793A3128342434000D9428 /* StacksAndQueues */,
+				F7793A332834244B000D9428 /* Trees */,
 			);
 			path = Algo;
 			sourceTree = "<group>";
@@ -235,9 +268,12 @@
 				F7AEC2072831DBA7008174B9 /* StackAndQueuesQuestions.swift in Sources */,
 				F7AEC1F4282E22DA008174B9 /* LinkedList.swift in Sources */,
 				F7AEC1E8282E22B7008174B9 /* ContentView.swift in Sources */,
+				F7793A3028341F67000D9428 /* BinarySearchTree.swift in Sources */,
+				F7793A352834246D000D9428 /* BinaryTreeView.swift in Sources */,
 				F7793A2C2833123A000D9428 /* ThreeStacksInOne.swift in Sources */,
 				F7AEC1E6282E22B7008174B9 /* AlgoApp.swift in Sources */,
 				F7793A242832FE0B000D9428 /* StackWithMin.swift in Sources */,
+				F7793A3728343BC8000D9428 /* BinaryTreeDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Algo/Preview Content\"";
+				DEVELOPMENT_TEAM = 77U2457882;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -411,6 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Algo/Preview Content\"";
+				DEVELOPMENT_TEAM = 77U2457882;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
