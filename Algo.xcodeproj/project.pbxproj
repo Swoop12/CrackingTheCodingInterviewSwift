@@ -16,6 +16,9 @@
 		F7793A3028341F67000D9428 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A2F28341F67000D9428 /* BinarySearchTree.swift */; };
 		F7793A352834246D000D9428 /* BinaryTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A342834246D000D9428 /* BinaryTreeView.swift */; };
 		F7793A3728343BC8000D9428 /* BinaryTreeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A3628343BC8000D9428 /* BinaryTreeDemo.swift */; };
+		F7793A392834503F000D9428 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A382834503F000D9428 /* Graph.swift */; };
+		F7793A3C283450CF000D9428 /* GraphQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A3B283450CF000D9428 /* GraphQuestions.swift */; };
+		F7793A3E283452C6000D9428 /* GraphsAndTreesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7793A3D283452C6000D9428 /* GraphsAndTreesTests.swift */; };
 		F7AEC1E6282E22B7008174B9 /* AlgoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEC1E5282E22B7008174B9 /* AlgoApp.swift */; };
 		F7AEC1E8282E22B7008174B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AEC1E7282E22B7008174B9 /* ContentView.swift */; };
 		F7AEC1EA282E22BA008174B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AEC1E9282E22BA008174B9 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		F7793A2F28341F67000D9428 /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		F7793A342834246D000D9428 /* BinaryTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeView.swift; sourceTree = "<group>"; };
 		F7793A3628343BC8000D9428 /* BinaryTreeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeDemo.swift; sourceTree = "<group>"; };
+		F7793A382834503F000D9428 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		F7793A3B283450CF000D9428 /* GraphQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQuestions.swift; sourceTree = "<group>"; };
+		F7793A3D283452C6000D9428 /* GraphsAndTreesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsAndTreesTests.swift; sourceTree = "<group>"; };
 		F7AEC1E2282E22B7008174B9 /* Algo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AEC1E5282E22B7008174B9 /* AlgoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoApp.swift; sourceTree = "<group>"; };
 		F7AEC1E7282E22B7008174B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +117,15 @@
 			path = Trees;
 			sourceTree = "<group>";
 		};
+		F7793A3A283450C4000D9428 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				F7793A382834503F000D9428 /* Graph.swift */,
+				F7793A3B283450CF000D9428 /* GraphQuestions.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
 		F7AEC1D9282E22B7008174B9 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +154,7 @@
 				F7793A3228342441000D9428 /* LinkedLists */,
 				F7793A3128342434000D9428 /* StacksAndQueues */,
 				F7793A332834244B000D9428 /* Trees */,
+				F7793A3A283450C4000D9428 /* Graph */,
 			);
 			path = Algo;
 			sourceTree = "<group>";
@@ -156,6 +172,7 @@
 			children = (
 				F7AEC1FB282E27D3008174B9 /* LinkedListTests.swift */,
 				F7793A2528330217000D9428 /* StacksAndQueuesTests.swift */,
+				F7793A3D283452C6000D9428 /* GraphsAndTreesTests.swift */,
 			);
 			path = AlgoTests;
 			sourceTree = "<group>";
@@ -266,11 +283,13 @@
 				F7793A2A28330DD5000D9428 /* QueueViaStacks.swift in Sources */,
 				F7793A28283305A2000D9428 /* SetOfStacks.swift in Sources */,
 				F7AEC2072831DBA7008174B9 /* StackAndQueuesQuestions.swift in Sources */,
+				F7793A392834503F000D9428 /* Graph.swift in Sources */,
 				F7AEC1F4282E22DA008174B9 /* LinkedList.swift in Sources */,
 				F7AEC1E8282E22B7008174B9 /* ContentView.swift in Sources */,
 				F7793A3028341F67000D9428 /* BinarySearchTree.swift in Sources */,
 				F7793A352834246D000D9428 /* BinaryTreeView.swift in Sources */,
 				F7793A2C2833123A000D9428 /* ThreeStacksInOne.swift in Sources */,
+				F7793A3C283450CF000D9428 /* GraphQuestions.swift in Sources */,
 				F7AEC1E6282E22B7008174B9 /* AlgoApp.swift in Sources */,
 				F7793A242832FE0B000D9428 /* StackWithMin.swift in Sources */,
 				F7793A3728343BC8000D9428 /* BinaryTreeDemo.swift in Sources */,
@@ -282,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7793A2628330217000D9428 /* StacksAndQueuesTests.swift in Sources */,
+				F7793A3E283452C6000D9428 /* GraphsAndTreesTests.swift in Sources */,
 				F7AEC1FC282E27D3008174B9 /* LinkedListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

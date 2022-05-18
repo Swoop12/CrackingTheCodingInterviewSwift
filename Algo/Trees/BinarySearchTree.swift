@@ -8,7 +8,11 @@
 import Foundation
 import Combine
 
-public class BinarySearchTreeNode<T: Comparable>: ObservableObject, Equatable {
+public class BinarySearchTreeNode<T: Comparable>: ObservableObject, Equatable, Comparable {
+    
+    public static func < (lhs: BinarySearchTreeNode<T>, rhs: BinarySearchTreeNode<T>) -> Bool {
+        return lhs.value < rhs.value
+    }
     
     public static func == (lhs: BinarySearchTreeNode<T>, rhs: BinarySearchTreeNode<T>) -> Bool {
         return lhs.value == rhs.value && lhs.leftChild == rhs.leftChild && lhs.rightChild == rhs.rightChild
@@ -87,7 +91,6 @@ public class BinarySearchTreeNode<T: Comparable>: ObservableObject, Equatable {
     
     public func preOrderTraversal(visit: (Node) -> Void) {
         visit(self)
-//        objectWillChange.send()
         leftChild?.preOrderTraversal(visit: visit)
         rightChild?.preOrderTraversal(visit: visit)
     }
@@ -96,6 +99,47 @@ public class BinarySearchTreeNode<T: Comparable>: ObservableObject, Equatable {
         leftChild?.postOrderTraversal(visit: visit)
         rightChild?.postOrderTraversal(visit: visit)
         visit(self)
-//        objectWillChange.send()
+    }
+    
+    public func depthFirstSearch(for item: T) -> Node? {
+        if value == item {
+            return self
+        } else if let left = leftChild?.depthFirstSearch(for: item) {
+            return left
+        } else if let right = rightChild?.depthFirstSearch(for: item) {
+            return right
+        } else {
+            return nil
+        }
+    }
+    
+    public func breadthFirstIteration(visit: (Node) -> Void) {
+        // CHEATING WITH AN ARRAY HERE SINCE OUR QUEUE ISN'T THREAD SAFE
+        var nodes: [Node] = [self]
+        while !nodes.isEmpty {
+            let current: Node = nodes.removeFirst()
+            visit(current)
+            if let leftChild = current.leftChild {
+                nodes.append(leftChild)
+            }
+            if let rightChild = current.rightChild {
+                nodes.append(rightChild)
+            }
+        }
+    }
+    
+    public func breadthFirstSearch(for item: T) -> Node? {
+        var queue = Queue<Node>()
+        queue.add(self)
+        while let current = queue.remove() {
+            if current.value == item { return current }
+            if let leftChild = current.leftChild {
+                queue.add(leftChild)
+            }
+            if let rightChild = current.rightChild {
+                queue.add(rightChild)
+            }
+        }
+        return nil
     }
 }

@@ -159,4 +159,16 @@ class StacksAndQueuesTests: XCTestCase {
         XCTAssertEqual(rescueFive?.species, .cat)
         XCTAssertEqual(rescueSix?.species, .dog)
     }
+    
+    func testQueueu() {
+        var queue = Queue<Int>()
+        queue.add(1)
+        queue.add(2)
+        queue.add(3)
+        
+        XCTAssertEqual(queue.peek(), 1)
+        XCTAssertEqual(queue.remove(), 1)
+        queue.add(4)
+        XCTAssertEqual(queue.peek(), 2)
+    }
 }

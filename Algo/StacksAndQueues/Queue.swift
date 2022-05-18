@@ -58,6 +58,9 @@ public struct Queue<T>: ExpressibleByArrayLiteral, CustomStringConvertible {
     /// Remove the first item in the list.
     public mutating func remove() -> T? {
         let value = front?.value
+        if front === back {
+            back = nil
+        }
         front = front?.next
         return value
     }

@@ -64,7 +64,7 @@ struct BinaryTreeDemo: View {
     }
     
     var buttonStack: some View {
-        HStack {
+        HStack(spacing: 24) {
             Button("In Order Traversal") {
                 DispatchQueue.global().async {
                     tree.inOrderTraversal { node in
@@ -75,8 +75,6 @@ struct BinaryTreeDemo: View {
                     }
                 }
             }
-            
-            Spacer()
             
             Button("Pre Order Traversal") {
                 DispatchQueue.global().async {
@@ -89,8 +87,6 @@ struct BinaryTreeDemo: View {
                 }
             }
             
-            Spacer()
-            
             Button("Post Order Traversal") {
                 DispatchQueue.global().async {
                     tree.postOrderTraversal { node in
@@ -102,13 +98,20 @@ struct BinaryTreeDemo: View {
                 }
             }
             
-            Spacer()
+            Button("Breadth First Traversal") {
+                DispatchQueue.global().async {
+                    tree.breadthFirstIteration { node in
+                        DispatchQueue.main.async {
+                            node.value.isVisited.toggle()
+                        }
+                        Thread.sleep(forTimeInterval: 0.3)
+                    }
+                }
+            }
             
             Button("Insert Random") {
                 tree.insert(NodeData.random())
             }
-            
-            Spacer()
             
             Button("Reset") {
                 tree.postOrderTraversal { node in
