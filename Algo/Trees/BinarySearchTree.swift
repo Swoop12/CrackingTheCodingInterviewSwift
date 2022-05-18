@@ -40,6 +40,8 @@ public class BinarySearchTreeNode<T: Comparable>: ObservableObject, Equatable, C
         }
     }
     
+    weak var parent: Node?
+    
     // MARK: - INITALIZERS
     
     public init(
@@ -78,6 +80,7 @@ public class BinarySearchTreeNode<T: Comparable>: ObservableObject, Equatable, C
             } else {
                 rightChild = newNode
             }
+            newNode.parent = self
         }
         objectWillChange.send()
     }
