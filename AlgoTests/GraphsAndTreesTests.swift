@@ -138,4 +138,65 @@ class GraphsAndTreesTests: XCTestCase {
         left.rightChild = BinarySearchTreeNode(value: 25)
         XCTAssertFalse(GraphQuestions.validate(bst: head))
     }
+    
+//    func testBuildOrder() {
+//        let projects = ["a", "b", "c", "d", "e", "f"]
+//        let deps = [("a", "d"), ("f", "b"), ("b", "d"), ("f", "a"), ("d", "c")]
+//        let order = try? GraphQuestions.buildOrder(projects: projects, dependencies: deps)
+////        XCTAssertEqual(order, ["f", "e", "a", "b", "d", "c"])
+//    }
+//
+//    func testBuildOrderDictionary() {
+//        let projects = ["a", "b", "c", "d", "e", "f"]
+//        let deps = [("a", "d"), ("f", "b"), ("b", "d"), ("f", "a"), ("d", "c")]
+//        let order = try? GraphQuestions.buildOrderDictionaries(projects: projects, dependencies: deps)
+////        XCTAssertEqual(order, ["f", "e", "a", "b", "d", "c"])
+//    }
+    
+    func testFirstCommonAncestor() {
+        
+        let head = BinarySearchTreeNode(value: 10)
+        let expected = head.insert(20)
+        head.insert(5)
+        head.insert(25)
+        head.insert(7)
+        let middle = head.insert(12)
+        head.insert(3)
+        head.insert(9)
+        head.insert(22)
+        head.insert(17)
+        head.insert(6)
+        head.insert(1)
+        head.insert(4)
+        head.insert(23)
+        let last = head.insert(24)
+        
+        let commonAncestor = GraphQuestions.firstCommonAnncestor(node1: middle, node2: last)
+        XCTAssertIdentical(expected, commonAncestor)
+    }
+    
+    func testBTSSequence1() {
+        let head = BinarySearchTreeNode(value: 5)
+        head.insert(3)
+        head.insert(7)
+        let expected = [
+            [5, 7, 3],
+            [5, 3,  7]
+        ]
+        let sequeces = GraphQuestions.btsSequence(root: head)
+        XCTAssertEqual(sequeces,
+                       expected)
+    }
+    
+    func testBTSSequence2() {
+        let head = BinarySearchTreeNode(value: 5)
+        head.insert(3)
+        head.insert(7)
+        head.insert(4)
+        head.insert(2)
+        head.insert(6)
+        head.insert(8)
+        let sequeces = GraphQuestions.btsSequence(root: head)
+        XCTAssertEqual(sequeces.count, 80)
+    }
 }

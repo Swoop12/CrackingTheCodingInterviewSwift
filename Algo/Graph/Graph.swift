@@ -34,4 +34,11 @@ public class GraphNode<T> {
             }
         }
     }
+    
+    public func depthFirstIteration(visit: (Node) -> Bool) {
+        if visit(self) { return }
+        for neighbor in neighbors {
+            neighbor.depthFirstIteration(visit: visit)
+        }
+    }
 }

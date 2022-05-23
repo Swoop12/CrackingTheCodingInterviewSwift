@@ -69,10 +69,12 @@ public class BinarySearchTreeNode<T: Comparable>: ObservableObject, Equatable, C
     }
     
     // MARK: - INSERT
-    public func insert(_ newValue: T) {
+    @discardableResult
+    public func insert(_ newValue: T) -> BinarySearchTreeNode<T> {
         let child = newValue < value ? leftChild : rightChild
         if let child = child {
-            child.insert(newValue)
+            objectWillChange.send()
+            return child.insert(newValue)
         } else {
             let newNode = Node(value: newValue)
             if newValue < value {
@@ -81,8 +83,9 @@ public class BinarySearchTreeNode<T: Comparable>: ObservableObject, Equatable, C
                 rightChild = newNode
             }
             newNode.parent = self
+            objectWillChange.send()
+            return newNode
         }
-        objectWillChange.send()
     }
     
     // MARK: - TRAVERSAL
